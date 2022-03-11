@@ -7,7 +7,7 @@ int main(void) {
 		"run", "help", "quit", "main" };
 	do {
 		std::cout << "> ";
-		std::cin >> comm;
+		std::getline(std::cin, comm);
 		std::transform(comm.begin(), comm.end(), comm.begin(),
 			[](unsigned char c) { return std::tolower(c); });	// stackoverflow function to lowercase input
 
